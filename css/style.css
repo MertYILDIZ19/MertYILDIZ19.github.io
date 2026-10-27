@@ -1,0 +1,139 @@
+:root {
+  --bg: #fafaf8;
+  --surface: #ffffff;
+  --ink: #1a2332;
+  --ink-soft: #46536b;
+  --accent: #0f5c8a;
+  --accent-dark: #0a4467;
+  --line: #e3e6ea;
+  --serif: "Source Serif 4", Georgia, serif;
+  --sans: "Inter", -apple-system, "Segoe UI", sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  font-size: 16px;
+}
+
+.container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.container.narrow { max-width: 780px; }
+
+/* ---------- Header / nav ---------- */
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250, 250, 248, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.nav__brand { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+.nav__links { display: flex; gap: 28px; list-style: none; }
+.nav__links a { color: var(--ink-soft); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+.nav__links a:hover { color: var(--accent); }
+.nav__toggle { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--ink); }
+
+/* ---------- Hero ---------- */
+.hero { padding: 72px 0 64px; }
+.hero__inner { display: flex; align-items: center; gap: 48px; }
+.hero__photo {
+  width: 180px; height: 180px; border-radius: 50%;
+  object-fit: cover; flex-shrink: 0;
+  border: 4px solid var(--surface);
+  box-shadow: 0 6px 24px rgba(26, 35, 50, 0.15);
+}
+.hero h1 { font-family: var(--serif); font-size: 2.6rem; line-height: 1.15; margin-bottom: 8px; }
+.hero__role { font-size: 1.15rem; font-weight: 600; color: var(--accent); }
+.hero__affil { color: var(--ink-soft); margin-bottom: 16px; }
+.hero__tagline { max-width: 52ch; color: var(--ink-soft); margin-bottom: 24px; }
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block; padding: 9px 18px; border-radius: 6px;
+  border: 1.5px solid var(--accent); color: var(--accent);
+  text-decoration: none; font-weight: 500; font-size: 0.95rem;
+  transition: background 0.15s, color 0.15s;
+}
+.btn:hover { background: var(--accent); color: #fff; }
+.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.hero__links { display: flex; gap: 12px; flex-wrap: wrap; }
+.hero__links.center, .center { justify-content: center; text-align: center; }
+
+/* ---------- Sections ---------- */
+.section { padding: 56px 0; }
+.section--alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section h2 {
+  font-family: var(--serif); font-size: 1.8rem; margin-bottom: 24px;
+  padding-bottom: 8px; border-bottom: 2px solid var(--accent); display: inline-block;
+}
+.section p { color: var(--ink-soft); margin-bottom: 16px; }
+
+/* ---------- Research cards ---------- */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.card {
+  background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+  padding: 20px; transition: transform 0.15s, box-shadow 0.15s;
+}
+.section:not(.section--alt) .card { background: var(--surface); }
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(26, 35, 50, 0.08); }
+.card h3 { font-size: 1.02rem; margin-bottom: 8px; color: var(--accent-dark); }
+.card p { font-size: 0.92rem; margin: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags span {
+  background: var(--bg); border: 1px solid var(--line); border-radius: 999px;
+  padding: 3px 10px; font-size: 0.8rem; color: var(--ink-soft); line-height: 1.4;
+}
+.section:not(.section--alt) .tags span { background: var(--bg); }
+
+/* ---------- Publications ---------- */
+.pubs__meta { margin-bottom: 8px; }
+.pubs__group { font-family: var(--serif); font-size: 1.15rem; color: var(--accent-dark); margin: 28px 0 12px; }
+.pubs { list-style: none; }
+.pubs li { padding: 10px 0 10px 20px; border-left: 3px solid var(--line); margin-bottom: 6px; color: var(--ink-soft); font-size: 0.95rem; transition: border-color 0.15s; }
+.pubs li:hover { border-left-color: var(--accent); }
+.pubs__authors strong { color: var(--ink); }
+.pubs em { color: var(--ink); }
+
+/* ---------- Service ---------- */
+.service-list { list-style: none; }
+.service-list li { padding: 8px 0; color: var(--ink-soft); border-bottom: 1px dashed var(--line); }
+.service-list li:last-child { border-bottom: none; }
+.service-list strong { color: var(--ink); }
+
+/* ---------- Timeline ---------- */
+.timeline__item { position: relative; padding: 0 0 24px 28px; border-left: 2px solid var(--line); margin-left: 6px; }
+.timeline__item:last-child { padding-bottom: 0; }
+.timeline__item::before {
+  content: ""; position: absolute; left: -7px; top: 6px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--accent); border: 2px solid var(--bg);
+}
+.timeline__when { font-size: 0.85rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; }
+.timeline__item h3 { font-size: 1.05rem; margin: 2px 0; }
+.timeline__item p { margin: 0; font-size: 0.95rem; }
+
+/* ---------- Footer ---------- */
+.site-footer { padding: 28px 0; color: var(--ink-soft); font-size: 0.88rem; border-top: 1px solid var(--line); }
+.site-footer a { color: var(--accent); text-decoration: none; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+  .hero__inner { flex-direction: column; text-align: center; gap: 24px; }
+  .hero__tagline { margin-left: auto; margin-right: auto; }
+  .hero__links { justify-content: center; }
+  .nav__toggle { display: block; }
+  .nav__links {
+    display: none; position: absolute; top: 60px; left: 0; right: 0;
+    flex-direction: column; gap: 0; background: var(--surface);
+    border-bottom: 1px solid var(--line); padding: 8px 0;
+  }
+  .nav__links.open { display: flex; }
+  .nav__links li a { display: block; padding: 12px 24px; }
+}

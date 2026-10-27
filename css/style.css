@@ -1,3 +1,10 @@
+/* ============================================================
+   Mert Yildiz — Academic Portfolio (multi-page)
+   Design system: Source Serif 4 headings + Inter body,
+   navy accent #0f5c8a on off-white, subtle animated background.
+   Shared by all pages. Do not fork per page.
+   ============================================================ */
+
 :root {
   --bg: #fafaf8;
   --surface: #ffffff;
@@ -50,6 +57,7 @@ body {
 
 .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
 .container.narrow { max-width: 780px; }
+.center { text-align: center; }
 
 /* ---------- Header / nav ---------- */
 .site-header {
@@ -60,12 +68,16 @@ body {
 }
 .nav { display: flex; align-items: center; justify-content: space-between; height: 60px; }
 .nav__brand { font-family: var(--serif); font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
-.nav__links { display: flex; gap: 28px; list-style: none; }
-.nav__links a { color: var(--ink-soft); text-decoration: none; font-size: 0.95rem; font-weight: 500; }
+.nav__links { display: flex; gap: 24px; list-style: none; }
+.nav__links a {
+  color: var(--ink-soft); text-decoration: none; font-size: 0.95rem; font-weight: 500;
+  padding: 6px 0; border-bottom: 2px solid transparent;
+}
 .nav__links a:hover { color: var(--accent); }
+.nav__links a.is-active { color: var(--accent); border-bottom-color: var(--accent); }
 .nav__toggle { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--ink); }
 
-/* ---------- Hero ---------- */
+/* ---------- Home hero ---------- */
 .hero { padding: 72px 0 64px; }
 .hero__inner { display: flex; align-items: center; gap: 48px; }
 .hero__photo {
@@ -78,6 +90,11 @@ body {
 .hero__role { font-size: 1.15rem; font-weight: 600; color: var(--accent); }
 .hero__affil { color: var(--ink-soft); margin-bottom: 16px; }
 .hero__tagline { max-width: 52ch; color: var(--ink-soft); margin-bottom: 24px; }
+
+/* ---------- Page hero (inner pages) ---------- */
+.page-hero { padding: 56px 0 8px; }
+.page-hero h1 { font-family: var(--serif); font-size: 2.3rem; line-height: 1.15; margin-bottom: 10px; }
+.page-hero p { color: var(--ink-soft); max-width: 64ch; }
 
 /* ---------- Buttons ---------- */
 .btn {
@@ -100,8 +117,10 @@ body {
   padding-bottom: 8px; border-bottom: 2px solid var(--accent); display: inline-block;
 }
 .section p { color: var(--ink-soft); margin-bottom: 16px; }
+.section a { color: var(--accent); text-decoration: none; }
+.section a:hover { text-decoration: underline; }
 
-/* ---------- Research cards ---------- */
+/* ---------- Cards ---------- */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
 .card {
   background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
@@ -116,7 +135,6 @@ body {
   background: var(--bg); border: 1px solid var(--line); border-radius: 999px;
   padding: 3px 10px; font-size: 0.8rem; color: var(--ink-soft); line-height: 1.4;
 }
-.section:not(.section--alt) .tags span { background: var(--bg); }
 
 /* ---------- Publications ---------- */
 .pubs__meta { margin-bottom: 8px; }
@@ -126,8 +144,15 @@ body {
 .pubs li:hover { border-left-color: var(--accent); }
 .pubs__authors strong { color: var(--ink); }
 .pubs em { color: var(--ink); }
+.pubs__links { margin-top: 6px; display: flex; gap: 8px; flex-wrap: wrap; }
+.pubs__pdf, .pubs__doi {
+  display: inline-block; padding: 1px 9px; border-radius: 999px;
+  border: 1px solid var(--accent); color: var(--accent); font-size: 0.75rem;
+  font-weight: 600; letter-spacing: 0.03em; text-decoration: none;
+}
+.pubs__pdf:hover, .pubs__doi:hover { background: var(--accent); color: #fff; }
 
-/* ---------- Service ---------- */
+/* ---------- Service / simple lists ---------- */
 .service-list { list-style: none; }
 .service-list li { padding: 8px 0; color: var(--ink-soft); border-bottom: 1px dashed var(--line); }
 .service-list li:last-child { border-bottom: none; }
@@ -143,10 +168,23 @@ body {
 }
 .timeline__when { font-size: 0.85rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; }
 .timeline__item h3 { font-size: 1.05rem; margin: 2px 0; }
-.timeline__item p { margin: 0; font-size: 0.95rem; }
+.timeline__item p { margin: 0 0 6px; font-size: 0.95rem; }
+.timeline__item ul { color: var(--ink-soft); font-size: 0.92rem; padding-left: 18px; margin-top: 4px; }
+
+/* ---------- About two-column ---------- */
+.about-grid { display: grid; grid-template-columns: 260px 1fr; gap: 40px; align-items: start; }
+.about-grid > .about-side { position: sticky; top: 84px; }
+.about-photo {
+  width: 100%; border-radius: 12px; object-fit: cover;
+  border: 4px solid var(--surface); box-shadow: 0 6px 24px rgba(26, 35, 50, 0.15);
+}
+.facts { list-style: none; margin-top: 20px; }
+.facts li { padding: 8px 0; border-bottom: 1px dashed var(--line); font-size: 0.92rem; color: var(--ink-soft); }
+.facts li:last-child { border-bottom: none; }
+.facts strong { color: var(--ink); display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 2px; }
 
 /* ---------- Footer ---------- */
-.site-footer { padding: 28px 0; color: var(--ink-soft); font-size: 0.88rem; border-top: 1px solid var(--line); }
+.site-footer { padding: 28px 0; color: var(--ink-soft); font-size: 0.88rem; border-top: 1px solid var(--line); margin-top: 24px; }
 .site-footer a { color: var(--accent); text-decoration: none; }
 
 /* ---------- Responsive ---------- */
@@ -162,4 +200,7 @@ body {
   }
   .nav__links.open { display: flex; }
   .nav__links li a { display: block; padding: 12px 24px; }
+  .about-grid { grid-template-columns: 1fr; gap: 24px; }
+  .about-grid > .about-side { position: static; }
+  .about-photo { max-width: 320px; margin: 0 auto; }
 }

@@ -18,17 +18,16 @@
 
 <header class="site-header">
   <nav class="nav container">
-    <a class="nav__brand" href="#top">Mert Yildiz</a>
+    <a class="nav__brand" href="index.html">Mert Yildiz</a>
     <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
     <ul class="nav__links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#service">Service</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="education.html">Education</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -51,14 +50,14 @@
         <div class="hero__links">
           <a class="btn btn--primary" href="https://scholar.google.com/citations?user=gYXDUkcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
           <a class="btn" href="https://www.linkedin.com/in/mertyldz/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/mertyildiz" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://github.com/MertYILDIZ19" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section id="about" class="section">
+  <!-- ============ ABOUT (excerpt) ============ -->
+  <section class="section">
     <div class="container narrow">
       <h2>About</h2>
       <p>
@@ -70,22 +69,12 @@
         deployable policies that do not rely on job-size information, combining queueing-theoretic models with
         trace-driven analysis, discrete-event simulation, and benchmarking.
       </p>
-      <p>
-        I have extended this line of work to AI infrastructure — benchmarking CPU–GPU memory offloading,
-        preemption, and KV-cache migration for LLM inference serving across multi-GPU systems, and co-designing
-        schedulers for multi-model LLM inference. I also contribute to research on resource scheduling and delay
-        metrics in 5G NR V2X sidelink and vehicular networks toward 6G. I collaborate with IMDEA Networks
-        Institute (Madrid), KTH Royal Institute of Technology, the University of Torino, the Luxembourg Institute
-        of Science and Technology (LIST), and the Karlsruhe Institute of Technology (KIT), and I mentor M.Sc.
-        students in Data Science at Sapienza. Beyond academia, I bring six years of industry experience in
-        ad-operations analytics from Compulse (formerly ZypTv), where I progressed from Operations Analyst to
-        Lead Ad Operations Analyst.
-      </p>
+      <p><a href="about.html">More about me →</a></p>
     </div>
   </section>
 
   <!-- ============ RESEARCH ============ -->
-  <section id="research" class="section section--alt">
+  <section class="section section--alt">
     <div class="container">
       <h2>Research Interests</h2>
       <div class="cards">
@@ -113,123 +102,55 @@
     </div>
   </section>
 
-  <!-- ============ PUBLICATIONS ============ -->
-  <section id="publications" class="section">
+  <!-- ============ SELECTED PUBLICATIONS ============ -->
+  <section class="section">
     <div class="container narrow">
-      <h2>Publications</h2>
-      <p class="pubs__meta">
-        Selected publications. Full list on
-        <a href="https://scholar.google.com/citations?user=gYXDUkcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
-      </p>
-      
-      <h3 class="pubs__group">Data Centers, Clusters &amp; LLM Serving</h3>
+      <h2>Selected Publications</h2>
+      <p class="pubs__meta">A selection of recent work. The full list is on the <a href="publications.html">Publications</a> page and on <a href="https://scholar.google.com/citations?user=gYXDUkcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.</p>
+
       <ul class="pubs">
         <li>
-          <span class="pubs__authors"><strong>M. Yildiz</strong>, A. Baiocchi</span>.
-          “Data-driven Workload Generation Based on Google Data Center Measurements.”
-          <em>IEEE 25th International Conference on High Performance Switching and Routing (HPSR)</em>, 2024.
+          <span class="pubs__authors"><strong>M. Yildiz</strong>, P. Spadaccino, A. Rolich, F. Cuomo, A. Baiocchi</span>.
+          “Towards Multi-Model LLM Schedulers: Empirical Insights into Offloading and Preemption.”
+          <em>2026 Mediterranean Artificial Intelligence and Networking Conference (MAIN)</em>, 2026.
+          <div class="pubs__links">
+            <a class="pubs__doi" href="https://doi.org/10.1109/MAIN71116.2026.11622343" target="_blank" rel="noopener">IEEE</a>
+            <a class="pubs__pdf" href="My_papers_pdfs/Towards_Multi-Model_LLM_Schedulers_Empirical_Insights_Into_Offloading_and_Preemption.pdf" download>PDF</a>
+          </div>
         </li>
         <li>
           <span class="pubs__authors"><strong>M. Yildiz</strong>, A. Rolich, A. Baiocchi</span>.
           “Dispatching Policies in Data Center Clusters: Insights from Google and Alibaba Workloads.”
           <em>Performance Evaluation</em> 172, 102551, 2026.
+          <div class="pubs__links">
+            <a class="pubs__doi" href="https://doi.org/10.1016/j.peva.2026.102551" target="_blank" rel="noopener">Journal</a>
+            <a class="pubs__pdf" href="My_papers_pdfs/1-s2.0-S0166531626000118-main.pdf" download>PDF</a>
+          </div>
+        </li>
+        <li>
+          <span class="pubs__authors">A. Rolich, <strong>M. Yildiz</strong>, I. Turcanu, A. Vinel, A. Baiocchi</span>.
+          “From Latency to Value of Information: A Review of Timeliness Metrics for Safe Transportation Systems in the 6G Era.”
+          <em>IEEE Vehicular Technology Magazine</em>, vol. 21, pp. 41–50, 2026.
+          <div class="pubs__links">
+            <a class="pubs__doi" href="https://doi.org/10.1109/MVT.2026.3695244" target="_blank" rel="noopener">IEEE</a>
+            <a class="pubs__pdf" href="My_papers_pdfs/From_Latency_to_Value_of_Information_A_Review_of_Timeliness_Metrics_for_Safe_Transportation_Systems_in_the_6G_Era.pdf" download>PDF</a>
+          </div>
         </li>
         <li>
           <span class="pubs__authors"><strong>M. Yildiz</strong>, A. Rolich, A. Baiocchi</span>.
           “Dispatching Odyssey: Exploring Performance in Computing Clusters under Real-world Workloads.”
           <em>36th International Teletraffic Congress (ITC-36)</em>, 2025.
-        </li>
-        <li>
-          <span class="pubs__authors"><strong>M. Yildiz</strong>, A. Rolich, A. Baiocchi</span>.
-          “‘Two-Stagification’: Job Dispatching in Large-Scale Clusters via a Two-Stage Architecture.”
-          <em>23rd Mediterranean Communication and Computer Networking Conference (MedComNet)</em>, 2025.
-        </li>
-        <li>
-          <span class="pubs__authors"><strong>M. Yildiz</strong>, A. Rolich, A. Baiocchi</span>.
-          “The Merit of Simple Policies: Buying Performance With Parallelism and System Architecture.”
-          <em>IEEE INFOCOM 2025 Workshops</em>, 2025.
-        </li>
-        <li>
-          <span class="pubs__authors"><strong>M. Yildiz</strong>, P. Spadaccino, A. Rolich, F. Cuomo, A. Baiocchi</span>.
-          “Towards Multi-Model LLM Schedulers: Empirical Insights into Offloading and Preemption.”
-          <em>2026 Mediterranean Artificial Intelligence and Networking Conference (MAIN)</em>, 2026.
-        </li>
-      </ul>
-
-      <h3 class="pubs__group">Vehicular Networks &amp; V2X</h3>
-      <ul class="pubs">
-        <li>
-          <span class="pubs__authors">A. Rolich, <strong>M. Yildiz</strong>, I. Turcanu, A. Vinel, A. Baiocchi</span>.
-          “On the Trade-off between AoI Performance and Resource Reuse Efficiency in 5G NR V2X Sidelink.”
-          <em>IEEE Vehicular Networking Conference (VNC)</em>, 2025.
-        </li>
-        <li>
-          <span class="pubs__authors">A. Rolich, <strong>M. Yildiz</strong>, I. Turcanu, A. Vinel, A. Baiocchi</span>.
-          “Rethinking Persistent Scheduling in 5G New Radio Vehicle-to-Everything Sidelink Communications.”
-          <em>IEEE Access</em>, 2025.
-        </li>
-        <li>
-          <span class="pubs__authors">A. Rolich, <strong>M. Yildiz</strong>, I. Turcanu, A. Vinel, A. Baiocchi</span>.
-          “From Latency to Value of Information: A Review of Timeliness Metrics for Safe Transportation Systems in the 6G Era.”
-          <em>IEEE Vehicular Technology Magazine</em>, 2026.
-        </li>
-        <li>
-          <span class="pubs__authors">A. Rolich, <strong>M. Yildiz</strong>, A. Baiocchi</span>.
-          “Safety-Critical Delays in Vehicular Networks Toward 6G: A Novel Metric for Disconnection Time Assessment.”
-          <em>IEEE Communications Letters</em>, 2026.
-        </li>
-        <li>
-          <span class="pubs__authors">A. Rolich, M. Tricco, S. Paroli, <strong>M. Yildiz</strong>, A. Baiocchi</span>.
-          “Repeated Contention Scheduling: A Novel Resource Allocation Algorithm Toward 6G Vehicular Networks.”
-          <em>arXiv preprint arXiv:2607.06103</em>, 2026.
-        </li>
-        <li>
-          <span class="pubs__authors">R. Iwaki, A. Rolich, J. Nakazato, <strong>M. Yildiz</strong>, M. Tsukada, A. Baiocchi</span>.
-          “AoI Optimization in 5G NR-V2X Sidelink through Propagation-Aware Dynamic Congestion Control.”
-          <em>PerVehicle 2026: 8th International Workshop on Pervasive Computing for Vehicular Systems</em>, 2026.
-        </li>
-        <li>
-          <span class="pubs__authors">A. Rolich, <strong>M. Yildiz</strong>, A.B.A. Razzaque, I. Turcanu, A. Vinel, A. Baiocchi</span>.
-          “Numerology-Persistence Coupling Performance in 5G NR-V2X Sidelink Communication.”
-          <em>IEEE 103rd Vehicular Technology Conference (VTC-Spring)</em>, 2026.
-        </li>
-      </ul>
-
-      <h3 class="pubs__group">Other</h3>
-      <ul class="pubs">
-        <li>
-          <span class="pubs__authors">G.E. Corazza, I. Rinaldi, I. Coletto, M. Mirabile, S. Mazzarella, F. Parasecolo, …, <strong>M. Yildiz</strong></span>.
-          “A Glimpse on the Futures of Telecommunication Networks: From Market, Technology and Regulation Trends to Strategic Foresight.”
-          <em>Journal of Open Innovation: Technology, Market, and Complexity</em> 12(1), 100735, 2026.
-        </li>
-        <li>
-          <span class="pubs__authors">I. Tinnirello, G.E. Corazza, M. Mirabile, S. Mazzarella, A. Baiocchi, …, <strong>M. Yildiz</strong></span>.
-          “Emerging Trends and Possible Futures of the Telecommunication Networks in Italy.”
-          <em>Telecommunications of the Future: RESTART Book Contributions</em>, 2026.
-        </li>
-        <li>
-          <span class="pubs__authors">O. Çopur, <strong>M. Yildiz</strong>, S. Göven, A.Ö. Güneri, A.B. Yavuz, M.A. Gökçe, …</span>.
-          “Periodic Route Optimization for FMCG Distributors.”
-          <em>International Conference on Production Research</em>, 748–759, 2019.
+          <div class="pubs__links">
+            <a class="pubs__doi" href="https://doi.org/10.23919/itc-3665175.2025.11078624" target="_blank" rel="noopener">DOI</a>
+            <a class="pubs__pdf" href="My_papers_pdfs/Dispatching_Odyssey_Exploring_Performance_in_Computing_Clusters_under_Real-world_Workloads.pdf" download>PDF</a>
+          </div>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- ============ SERVICE ============ -->
-  <section id="service" class="section section--alt">
-    <div class="container narrow">
-      <h2>Academic Service</h2>
-      <ul class="service-list">
-        <li><strong>TPC member:</strong> IEEE WCNC 2025, MAIN 2026</li>
-        <li><strong>Journal reviewer:</strong> Computer Networks (Elsevier), Vehicles (MDPI)</li>
-        <li><strong>Conference reviewer:</strong> IEEE WCNC, IEEE VTC, IEEE VNC, MAIN, MedComNet</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ EXPERIENCE ============ -->
-  <section id="experience" class="section">
+  <!-- ============ EXPERIENCE (excerpt) ============ -->
+  <section class="section section--alt">
     <div class="container narrow">
       <h2>Experience</h2>
       <div class="timeline">
@@ -241,7 +162,7 @@
         <div class="timeline__item">
           <span class="timeline__when">Feb 2026 — Jul 2026</span>
           <h3>Visiting Researcher</h3>
-          <p>IMDEA Networks Institute, Leganés, Spain — Supervisor: Prof. Marco Ajmone Marsan. How scheduler design shapes delay and energy in multi-server data-center systems.</p>
+          <p>IMDEA Networks Institute, Leganés, Spain — supervisor: Prof. Marco Ajmone Marsan.</p>
         </div>
         <div class="timeline__item">
           <span class="timeline__when">Jan 2019 — Jan 2025 · San Francisco</span>
@@ -249,60 +170,12 @@
           <p>Compulse (formerly ZypTv) — automated reporting pipelines, cross-platform ad analytics at scale, and leading a team of operations analysts.</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ EDUCATION ============ -->
-  <section id="education" class="section section--alt">
-    <div class="container narrow">
-      <h2>Education</h2>
-      <div class="timeline">
-        <div class="timeline__item">
-          <span class="timeline__when">Nov 2023 — Present · defense expected Jan 2027</span>
-          <h3>Ph.D. in Information and Communication Technology</h3>
-          <p>Sapienza University of Rome, Italy — Advisor: Prof. Andrea Baiocchi (DIET). Performance analysis and scheduling in large-scale computing systems, from CPU data-center clusters to GPU-based LLM inference serving.</p>
-        </div>
-        <div class="timeline__item">
-          <span class="timeline__when">Oct 2020 — Mar 2023 · 110/110</span>
-          <h3>M.Sc. in Data Science</h3>
-          <p>Sapienza University of Rome, Italy — Thesis: Job and Task Workload Generator Based on Google Data Center Measurements for Scheduling Optimization.</p>
-        </div>
-        <div class="timeline__item">
-          <span class="timeline__when">Sep 2015 — Jun 2019 · 3.76/4.0</span>
-          <h3>B.Sc. in Industrial Engineering</h3>
-          <p>Yasar University, Izmir, Turkey.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SKILLS ============ -->
-  <section id="skills" class="section">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Systems &amp; Networking</h3>
-          <p class="tags"><span>Scheduling &amp; Dispatching</span><span>Resource Management</span><span>Performance Evaluation</span><span>HPC</span><span>Cloud Computing</span><span>Distributed Systems</span><span>LLM Inference Serving</span><span>5G NR V2X Sidelink</span></p>
-        </div>
-        <div class="card">
-          <h3>Theoretical Foundations</h3>
-          <p class="tags"><span>Queueing Theory</span><span>Stochastic Processes</span><span>Operations Research</span><span>Optimization Algorithms</span><span>Discrete-Event Simulation Design &amp; Implementation</span></p>
-        </div>
-        <div class="card">
-          <h3>AI &amp; Machine Learning</h3>
-          <p class="tags"><span>Deep Learning (TensorFlow, Keras, PyTorch)</span><span>Supervised / Unsupervised Learning</span><span>Reinforcement Learning</span><span>NLP</span><span>Computer Vision</span></p>
-        </div>
-        <div class="card">
-          <h3>Programming &amp; Tools</h3>
-          <p class="tags"><span>Python (NumPy, Numba)</span><span>SQL</span><span>R</span><span>Matlab</span><span>Git</span><span>Docker</span><span>Ollama</span><span>Google BigQuery</span><span>PowerBI</span></p>
-        </div>
-      </div>
+      <p><a href="experience.html">Full experience →</a></p>
     </div>
   </section>
 
   <!-- ============ CONTACT ============ -->
-  <section id="contact" class="section section--alt">
+  <section class="section">
     <div class="container narrow center">
       <h2>Contact</h2>
       <p>
@@ -321,7 +194,7 @@
 
 <footer class="site-footer">
   <div class="container narrow center">
-    <p>© <span id="year"></span> Mert Yildiz · <a href="https://github.com/mertyildiz" target="_blank" rel="noopener">GitHub</a></p>
+    <p>© <span id="year"></span> Mert Yildiz · <a href="mailto:mert.yildiz@uniroma1.it">Email</a> · <a href="https://github.com/MertYILDIZ19" target="_blank" rel="noopener">GitHub</a></p>
   </div>
 </footer>
 

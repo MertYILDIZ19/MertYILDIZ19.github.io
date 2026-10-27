@@ -1,35 +1,35 @@
 # Portfolio Website
 
-Single-page academic portfolio for mertyildiz.github.io.
+Multi-page academic portfolio for https://mertyildiz19.github.io
 Plain HTML/CSS/JS — no build step, deploys directly to GitHub Pages.
 
 ## Structure
-- index.html        — the whole site (hero, about, research, publications, service, experience, education, skills, contact)
-- css/style.css     — all styling (responsive down to 390px)
+- index.html        — home (hero, about excerpt, research cards, selected publications, experience excerpt, contact)
+- about.html        — About Me (photo + facts sidebar, full bio)
+- publications.html — all 16 papers grouped by topic, newest first, with IEEE/Journal/DOI + PDF links
+- experience.html   — full timeline (PhD, IMDEA visit, Compulse, UNICEF, Hugo Boss)
+- education.html    — degrees + conferences & doctoral training
+- skills.html       — skill cards + languages + interests
+- service.html      — TPC roles, reviewing, mentoring
+- contact.html      — email, location, profiles
+- css/style.css     — shared design system (every page links this one file)
 - js/main.js        — mobile nav toggle + footer year
 - assets/Profile_photo.jpg — portrait photo (hero + favicon)
-- CV_1.pdf          — industry CV (Mert's working doc, not part of the site)
-- CV_2.pdf          — academic CV (Mert's working doc, not part of the site)
-- Cover_Letter (5).pdf — cover letter (Mert's working doc, not part of the site)
+- My_papers_pdfs/   — 15 paper PDFs linked from publications.html
 
-## What's real (from LinkedIn + Google Scholar + Mert's CVs, Oct 2026)
-- Bio / research interests / service (TPC IEEE WCNC 2025, MAIN 2026; reviewer Computer Networks, Vehicles, IEEE WCNC/VTC/VNC/MAIN/MedComNet)
-- Publications grouped: Under Review (3), Data Centers & LLM Serving, Vehicular Networks & V2X, Other
-- Experience timeline (Sapienza PhD Nov 2023–present; IMDEA visit Feb–Jul 2026 under Prof. Ajmone Marsan; Compulse industry Jan 2019–Jan 2025)
-- Education timeline (PhD Sapienza, defense expected Jan 2027; M.Sc. Data Science 110/110; B.Sc. Industrial Engineering Yasar)
-- Skills cards (Systems & Networking, Theoretical Foundations, AI & ML, Programming & Tools)
-- Links: Google Scholar, LinkedIn, GitHub
-- Email: mert.yildiz@uniroma1.it
-- Photo: assets/Profile_photo.jpg
+## Working docs (gitignored, never deployed — the website IS the CV)
+CV_1.pdf, CV_2.pdf, Cover_Letter (5).pdf, Github_token.txt
 
-## TODO before going live
-1. ~~Push access~~ DONE (2026-10-27) — repo renamed to `MertYILDIZ19.github.io`
-   (must match the GitHub username for a user-site URL), pushed, and verified
-   live at https://mertyildiz19.github.io with the animated background.
-   NOTE: CV_*.pdf and Cover_Letter are excluded via .gitignore — the website
-   itself is the CV; those PDFs stay local only.
-2. Optional: delete Github_token.txt locally and revoke the PAT in GitHub.
+## Deployment
+Repo: github.com/MertYILDIZ19/MertYILDIZ19.github.io (name MUST match the username for a user-site URL).
+Push with a fine-grained PAT (Contents: read/write):
+  git remote set-url origin https://x-access-token:<tok>@github.com/MertYILDIZ19/MertYILDIZ19.github.io.git
+  git push
+  git remote set-url origin https://github.com/MertYILDIZ19/MertYILDIZ19.github.io.git   # strip token after
+Then wait 1–5 min and read back https://mertyildiz19.github.io to confirm it's live.
 
-## Verified locally (2026-10-27)
-Rendered at localhost:8765 — desktop 1280px and mobile 390px checked after
-content update (email, photo, under-review group, service list, experience).
+## Verified (2026-10-27)
+Multi-page rebuild: all 8 pages checked — no horizontal overflow at 1280px or 390px,
+nav active states correct, all local assets resolve, publication pills aligned.
+DOIs extracted from the papers themselves (14 of 15; VTC-Spring numerology and the
+book chapter are PDF-only). Paper links point to IEEE/journal pages, not arXiv.

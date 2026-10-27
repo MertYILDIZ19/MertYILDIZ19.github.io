@@ -23,17 +23,12 @@ Plain HTML/CSS/JS — no build step, deploys directly to GitHub Pages.
 - Photo: assets/Profile_photo.jpg
 
 ## TODO before going live
-1. Push access — needs gh auth login or an SSH key, then:
-     cd portfolio-website
-     git init -b main
-     git add . && git commit -m "Portfolio site"
-     git remote add origin https://github.com/mertyildiz/mertyildiz.github.io.git
-     git push -u origin main
-   (If an old mertyildiz.github.io repo exists, either delete it on GitHub first
-   or `git pull`/force-push. The URL currently 404s as of 2026-10-26.)
+1. ~~Push access~~ DONE (2026-10-27) — repo renamed to `MertYILDIZ19.github.io`
+   (must match the GitHub username for a user-site URL), pushed, and verified
+   live at https://mertyildiz19.github.io with the animated background.
    NOTE: CV_*.pdf and Cover_Letter are excluded via .gitignore — the website
    itself is the CV; those PDFs stay local only.
-2. After push: wait 1–5 min, check https://mertyildiz.github.io
+2. Optional: delete Github_token.txt locally and revoke the PAT in GitHub.
 
 ## Verified locally (2026-10-27)
 Rendered at localhost:8765 — desktop 1280px and mobile 390px checked after

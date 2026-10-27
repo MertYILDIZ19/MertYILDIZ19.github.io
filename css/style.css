@@ -12,11 +12,37 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background-color: #f5f8fb; }
+
+/* ---------- Cool background: soft drifting glows + faint dot grid ---------- */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  background:
+    radial-gradient(rgba(15, 92, 138, 0.05) 1px, transparent 1.4px),
+    radial-gradient(1100px 700px at 88% -12%, rgba(15, 92, 138, 0.10), transparent 62%),
+    radial-gradient(900px 650px at -12% 34%, rgba(6, 182, 212, 0.09), transparent 60%),
+    radial-gradient(1000px 700px at 55% 112%, rgba(37, 99, 235, 0.08), transparent 62%);
+  background-size: 26px 26px, auto, auto, auto;
+}
+body::after {
+  content: ""; position: fixed; top: -30%; left: -20%; width: 140%; height: 160%;
+  z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(640px 420px at 72% 28%, rgba(59, 130, 246, 0.10), transparent 70%),
+    radial-gradient(520px 380px at 18% 78%, rgba(34, 211, 238, 0.09), transparent 70%);
+  animation: bg-drift 40s ease-in-out infinite alternate;
+}
+@keyframes bg-drift {
+  from { transform: translate3d(-2%, -1.5%, 0) scale(1); }
+  to   { transform: translate3d(2.5%, 2%, 0) scale(1.06); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  body::after { animation: none; }
+}
 
 body {
   font-family: var(--sans);
-  background: var(--bg);
   color: var(--ink);
   line-height: 1.65;
   font-size: 16px;
@@ -68,7 +94,7 @@ body {
 
 /* ---------- Sections ---------- */
 .section { padding: 56px 0; }
-.section--alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.section--alt { background: rgba(255, 255, 255, 0.72); backdrop-filter: blur(3px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .section h2 {
   font-family: var(--serif); font-size: 1.8rem; margin-bottom: 24px;
   padding-bottom: 8px; border-bottom: 2px solid var(--accent); display: inline-block;

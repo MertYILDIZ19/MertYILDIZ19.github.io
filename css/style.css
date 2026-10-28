@@ -297,10 +297,14 @@ html.js .reveal.in { opacity: 1; transform: none; }
 .contact-lead p { margin-bottom: 24px; }
 .contact-row--tall { align-items: flex-start; }
 .email-block { display: flex; flex-direction: column; gap: 3px; }
-.contact-email { font-family: var(--serif); font-size: 1rem; font-weight: 600; color: var(--accent-dark); letter-spacing: 0.01em; overflow-wrap: anywhere; }
-.contact-email--alt { font-size: 0.9rem; }
+.contact-email-img {
+  display: block; height: auto; width: 100%; max-width: 399px;
+  user-select: none; -webkit-user-drag: none;
+}
+.contact-email-img--alt { max-width: 329px; }
 .contact-email-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); margin-top: 6px; }
 .email-block small { color: var(--ink-soft); font-size: 0.75rem; margin-top: 4px; }
+.facts-email-img { display: block; height: 22px; width: auto; margin-top: 3px; user-select: none; -webkit-user-drag: none; }
 .contact-alt { margin-top: 14px; }
 
 .contact-card {

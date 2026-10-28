@@ -28,8 +28,16 @@ Push with a fine-grained PAT (Contents: read/write):
   git remote set-url origin https://github.com/MertYILDIZ19/MertYILDIZ19.github.io.git   # strip token after
 Then wait 1–5 min and read back https://mertyildiz19.github.io to confirm it's live.
 
-## Verified (2026-10-27)
-Multi-page rebuild: all 8 pages checked — no horizontal overflow at 1280px or 390px,
-nav active states correct, all local assets resolve, publication pills aligned.
+## Verified (2026-10-28)
+Design system v2 rebuild (visual + mobile pass):
+- Fluid type scale (clamp()), gradient accent highlights, refined cards/timeline/publication
+  cards with hover states, dark footer, scroll-reveal animations (JS-gated, reduced-motion safe),
+  animated nav underlines, consistent container on all page heroes.
+- Mobile: hamburger dropdown with drop animation + Escape-to-close, single-column stacks at
+  <=860px/<=720px/<=420px; verified no horizontal overflow at 390px on all 8 pages and clean
+  desktop layout at 1280px. All local assets (incl. 15 paper PDFs) resolve; nav active states
+  correct per page.
+- Fixed: `.section a` was overriding primary-button text color (blue-on-blue) — now scoped to
+  `a:not(.btn)`.
 DOIs extracted from the papers themselves (14 of 15; VTC-Spring numerology and the
 book chapter are PDF-only). Paper links point to IEEE/journal pages, not arXiv.

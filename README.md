@@ -8,7 +8,7 @@ Plain HTML/CSS/JS — no build step, deploys directly to GitHub Pages.
 - about.html        — About Me (photo + facts sidebar, full bio)
 - publications.html — all 16 papers grouped by topic, newest first, with IEEE/Journal/DOI + PDF links
 - experience.html   — full timeline (PhD, IMDEA visit, Compulse, UNICEF, Hugo Boss)
-- education.html    — degrees + conferences & doctoral training
+- education.html    — degrees (Ph.D., M.Sc., B.Sc.)
 - skills.html       — skill cards + languages + interests
 - activities.html   — advised theses, TPC roles, reviewing, awards
 - contact.html      — email, location, profiles

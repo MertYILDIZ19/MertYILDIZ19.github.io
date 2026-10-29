@@ -38,7 +38,7 @@
   <section class="page-hero">
     <div class="container narrow">
       <h1>Bio</h1>
-      <p>Ph.D. candidate in ICT at Sapienza University of Rome — building simple, deployable scheduling policies for large-scale computing and LLM inference.</p>
+      <p>Ph.D. candidate in ICT at Sapienza University of Rome — keeping giant computing clusters busy without keeping anyone waiting.</p>
     </div>
   </section>
 
@@ -64,40 +64,35 @@
 
         <div class="about-body">
           <p>
-            I am a Ph.D. candidate in Information and Communication Technology at Sapienza University of Rome,
-            where I have been working since November 2023 under the supervision of Prof. Andrea Baiocchi, with an
-            expected defense in January 2027. My research focuses on performance evaluation and resource allocation
-            in large-scale computing systems — the question of how to keep big clusters busy without keeping users
-            waiting.
+            My research question is deceptively simple: <em>how do you keep a giant cluster busy without keeping
+            anyone waiting?</em> Behind that question sits the machinery of modern computing — data centers, HPC
+            systems, and increasingly the GPU fleets that serve AI models. I design scheduling policies that are
+            simple enough to deploy in production, yet strong enough to reach near-optimal performance.
           </p>
           <p>
-            At its core, my work develops practical dispatching and scheduling policies for heterogeneous,
-            multi-resource clusters with CPU/GPU and memory constraints, evaluated against production traces from
-            Google Borg and Alibaba. A recurring theme is that near-optimal performance can be reached with simple,
-            deployable policies that do not require job-size information — a property that matters enormously in real
-            data centers, where such information is often unavailable or unreliable. To study this, I combine
-            queueing-theoretic models, trace-driven workload analysis, discrete-event simulation, and hands-on
-            benchmarking.
+            What excites me is the gap between theory and practice. The textbook answer to optimal scheduling
+            usually assumes you know each job's size in advance — information real data centers simply don't have.
+            So I work on policies that are deployable as-is, and I test them the hard way: against production
+            traces from Google Borg and Alibaba, with queueing models, simulation, and hands-on benchmarking.
           </p>
           <p>
-            I have also extended this line of work to AI infrastructure: benchmarks for LLM inference on multi-GPU
-            systems spanning 8B- to 70B-parameter models, covering CPU–GPU offloading, preemption, and KV-cache
-            migration, as well as schedulers for serving multiple LLMs concurrently. More broadly, I work on 5G NR
-            V2X sidelink and vehicular networks toward 6G — studying Age of Information, persistent scheduling, and
-            safety-critical delay metrics for connected vehicles.
+            Lately this line of work has extended to AI infrastructure — how several large language models share a
+            single GPU server, when it pays to preempt or offload work, and what that costs in energy and delay.
+            I also study connected vehicles: how quickly safety-critical information can travel between cars on
+            the road, and what “fresh enough” really means for 6G.
           </p>
           <p>
-            My research is deeply collaborative. I am a visiting researcher at the IMDEA Networks Institute in Madrid
-            (February–July 2026) under Prof. Marco Ajmone Marsan, and I have worked with groups at KTH, the
-            University of Torino, LIST, and KIT. At Sapienza I also mentor M.Sc. Data Science students — two have
-            graduated so far, and one is ongoing on stochastic optimization for energy efficiency.
+            The path here has not been a straight line: an engineering degree in Izmir, six years in San Francisco
+            building ad-analytics pipelines at Compulse, and then Rome for the Ph.D. That industry stint still shapes
+            how I do research: I care about systems that actually work under pressure, not just models
+            that look good on paper. Along the way I have mentored M.Sc. students — two already graduated — served
+            on conference program committees, and won a few hackathons (including first prize at HackUPC).
           </p>
           <p>
-            Before my Ph.D., I spent six years in industry as Lead Ad Operations Analyst at Compulse (formerly
-            ZypTv), where I built automated reporting pipelines and cross-platform ad analytics. That experience
-            taught me how to wire data and services together into systems that actually work — and how to deliver
-            under pressure. I hold a B.Sc. in Industrial Engineering and an M.Sc. in Data Science, with a final
-            grade of 110/110.
+            My work is deeply collaborative: I am currently a visiting researcher at the IMDEA Networks Institute in
+            Madrid under Prof. Marco Ajmone Marsan, and I have worked with groups at KTH, the University of Torino,
+            LIST, and KIT. Before my Ph.D. I hold an M.Sc. in Data Science (110/110) and a B.Sc. in Industrial
+            Engineering — which is where the love of queues and optimization began.
           </p>
         </div>
 

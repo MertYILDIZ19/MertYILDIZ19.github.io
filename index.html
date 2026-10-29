@@ -43,9 +43,8 @@
         <p class="hero__role">Ph.D. Candidate in Information &amp; Communication Technology</p>
         <p class="hero__affil">Sapienza University of Rome, Italy</p>
         <p class="hero__tagline">
-          I work on resource management in large-scale computing systems — data centers and HPC —
-          designing simple, deployable dispatching and scheduling policies, and extending them to
-          LLM inference serving across multi-GPU platforms.
+          I design scheduling policies for giant computing clusters — simple enough to deploy, strong enough to
+          perform — and I am extending them to AI inference serving and connected vehicles.
         </p>
         <div class="hero__links">
           <a class="btn btn--primary" href="https://scholar.google.com/citations?user=gYXDUkcAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
@@ -61,13 +60,10 @@
     <div class="container narrow">
       <h2>Bio</h2>
       <p>
-        I am a Ph.D. candidate in Information and Communication Technology at Sapienza University of Rome
-        (expected defense January 2027), working on performance evaluation and resource allocation in
-        large-scale computing systems. My research develops practical dispatching and scheduling policies for
-        heterogeneous, multi-resource clusters — CPU/GPU and memory — and evaluates them against production
-        traces from Google Borg and Alibaba. A recurring theme is reaching near-optimal performance with simple,
-        deployable policies that do not rely on job-size information, combining queueing-theoretic models with
-        trace-driven analysis, discrete-event simulation, and benchmarking.
+        My research question is deceptively simple: how do you keep a giant cluster busy without keeping anyone
+        waiting? I design scheduling policies that are simple enough to deploy in production, yet strong enough
+        to reach near-optimal performance — and I test them the hard way, against real workloads from Google Borg
+        and Alibaba. Lately this line of work has extended to AI inference serving and connected vehicles.
       </p>
       <p><a href="bio.html">Read my full bio →</a></p>
     </div>
@@ -79,24 +75,24 @@
       <h2>Research Interests</h2>
       <div class="cards">
         <div class="card">
-          <h3>Computational Resource Allocation</h3>
-          <p>Analyzing multiserver jobs in data centers and HPC clusters using queueing theory, grounded in real workloads (Google Borg, Alibaba traces).</p>
+          <h3>Keeping Clusters Busy</h3>
+          <p>Scheduling jobs across data centers and HPC systems so machines stay full and users stop waiting — grounded in real Google Borg and Alibaba workloads.</p>
         </div>
         <div class="card">
-          <h3>Multiobjective Optimization</h3>
-          <p>Dispatching and scheduling multiserver jobs with a focus on the stochastic trade-off between energy efficiency and response time.</p>
+          <h3>Energy vs. Speed</h3>
+          <p>Finding the sweet spot between a cluster's power bill and how fast it responds, without needing to know each job in advance.</p>
         </div>
         <div class="card">
-          <h3>HPC Performance Prediction</h3>
-          <p>Machine-learning models for predicting computational job execution times to improve scheduling decisions.</p>
+          <h3>Predicting Run Times</h3>
+          <p>Making smart guesses about how long a computation will take, so the scheduler can place it well before it even starts.</p>
         </div>
         <div class="card">
-          <h3>LLM Inference Infrastructure</h3>
-          <p>Schedulers for multi-model LLM inference: CPU–GPU offloading, preemption, KV-cache migration, and multi-model serving across multi-GPU systems.</p>
+          <h3>Serving AI Models</h3>
+          <p>How several large language models share one GPU server — when to pause, offload, or move work around to keep them all fast.</p>
         </div>
         <div class="card">
-          <h3>Vehicular Communication</h3>
-          <p>Resource management and optimization in V2X networks — Age of Information, persistent scheduling, and safety-critical delay metrics toward 6G.</p>
+          <h3>Connected Vehicles</h3>
+          <p>Making sure safety-critical information reaches nearby cars quickly enough, as networks evolve toward 6G.</p>
         </div>
       </div>
     </div>

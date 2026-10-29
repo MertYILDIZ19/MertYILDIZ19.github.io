@@ -38,7 +38,7 @@
   <section class="page-hero">
     <div class="container narrow">
       <h1>Bio</h1>
-      <p>Ph.D. candidate in ICT at Sapienza University of Rome — keeping giant computing clusters busy without keeping anyone waiting.</p>
+      <p>Ph.D. candidate in ICT at Sapienza University of Rome — designing scheduling policies that keep large-scale clusters busy without keeping users waiting.</p>
     </div>
   </section>
 
@@ -64,35 +64,36 @@
 
         <div class="about-body">
           <p>
-            My research question is deceptively simple: <em>how do you keep a giant cluster busy without keeping
-            anyone waiting?</em> Behind that question sits the machinery of modern computing — data centers, HPC
-            systems, and increasingly the GPU fleets that serve AI models. I design scheduling policies that are
-            simple enough to deploy in production, yet strong enough to reach near-optimal performance.
+            My research starts from a question that looks simple but sits at the heart of modern computing:
+            <em>how do you keep a large-scale cluster busy without keeping users waiting?</em> Data centers, HPC
+            systems, and increasingly the GPU fleets that serve AI models all face this tension. My goal is to design
+            scheduling policies that are simple enough to deploy in production, yet strong enough to approach optimal
+            performance.
           </p>
           <p>
-            What excites me is the gap between theory and practice. The textbook answer to optimal scheduling
-            usually assumes you know each job's size in advance — information real data centers simply don't have.
-            So I work on policies that are deployable as-is, and I test them the hard way: against production
-            traces from Google Borg and Alibaba, with queueing models, simulation, and hands-on benchmarking.
+            What drives me is the gap between theory and practice. Classical results on optimal scheduling typically
+            assume that job sizes are known in advance — information that real data centers rarely have. I therefore
+            focus on policies that can be deployed as-is, and I validate them rigorously against production traces from
+            Google Borg and Alibaba, combining queueing models, discrete-event simulation, and hands-on benchmarking.
           </p>
           <p>
-            Lately this line of work has extended to AI infrastructure — how several large language models share a
-            single GPU server, when it pays to preempt or offload work, and what that costs in energy and delay.
-            I also study connected vehicles: how quickly safety-critical information can travel between cars on
-            the road, and what “fresh enough” really means for 6G.
+            Recently this line of work has extended to AI infrastructure: how multiple large language models can share
+            a single GPU server, when it is worth preempting or offloading work, and what that costs in energy and
+            delay. I also study connected-vehicle communication — how quickly safety-critical information can travel
+            between vehicles, and what “fresh enough” really means as networks evolve toward 6G.
           </p>
           <p>
-            The path here has not been a straight line: an engineering degree in Izmir, six years in San Francisco
-            building ad-analytics pipelines at Compulse, and then Rome for the Ph.D. That industry stint still shapes
-            how I do research: I care about systems that actually work under pressure, not just models
-            that look good on paper. Along the way I have mentored M.Sc. students — two already graduated — served
-            on conference program committees, and won a few hackathons (including first prize at HackUPC).
+            My path to research has not been a straight line: an engineering degree in Izmir, six years in San Francisco
+            building ad-analytics pipelines at Compulse, and then Rome for the Ph.D. That industry experience still
+            shapes how I do research — I care about systems that work under real load, not just models that look good on
+            paper. Along the way I have mentored M.Sc. students (two of whom have graduated), served on conference
+            program committees, and won a few hackathons, including first prize at HackUPC.
           </p>
           <p>
             My work is deeply collaborative: I am currently a visiting researcher at the IMDEA Networks Institute in
             Madrid under Prof. Marco Ajmone Marsan, and I have worked with groups at KTH, the University of Torino,
-            LIST, and KIT. Before my Ph.D. I hold an M.Sc. in Data Science (110/110) and a B.Sc. in Industrial
-            Engineering — which is where the love of queues and optimization began.
+            LIST, and KIT. Before my Ph.D., I hold an M.Sc. in Data Science (110/110) and a B.Sc. in Industrial
+            Engineering — where my interest in queues and optimization began.
           </p>
         </div>
 

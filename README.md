@@ -10,7 +10,7 @@ Plain HTML/CSS/JS — no build step, deploys directly to GitHub Pages.
 - experience.html   — full timeline (PhD, IMDEA visit, Compulse, UNICEF, Hugo Boss)
 - education.html    — degrees + conferences & doctoral training
 - skills.html       — skill cards + languages + interests
-- service.html      — TPC roles, reviewing, mentoring
+- activities.html   — advised theses, TPC roles, reviewing, awards
 - contact.html      — email, location, profiles
 - css/style.css     — shared design system (every page links this one file)
 - js/main.js        — mobile nav toggle + footer year

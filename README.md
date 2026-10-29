@@ -4,11 +4,10 @@ Multi-page academic portfolio for https://mertyildiz19.github.io
 Plain HTML/CSS/JS — no build step, deploys directly to GitHub Pages.
 
 ## Structure
-- index.html        — home (hero, about excerpt, research cards, selected publications, experience excerpt, contact)
-- about.html        — About Me (photo + facts sidebar, full bio)
+- index.html        — home (hero, bio excerpt, research cards, selected publications, experience excerpt, contact)
+- bio.html          — Bio (photo + facts sidebar, full bio)
 - publications.html — all 16 papers grouped by topic, newest first, with IEEE/Journal/DOI + PDF links
-- experience.html   — full timeline (PhD, IMDEA visit, Compulse, UNICEF, Hugo Boss)
-- education.html    — degrees (Ph.D., M.Sc., B.Sc.)
+- experience.html   — full timeline (PhD, IMDEA visit, Compulse, UNICEF, Hugo Boss) + Education section (Ph.D., M.Sc., B.Sc.)
 - skills.html       — skill cards + languages + interests
 - activities.html   — advised theses, TPC roles, reviewing, awards
 - contact.html      — email, location, profiles
